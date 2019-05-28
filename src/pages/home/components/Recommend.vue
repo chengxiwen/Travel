@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" src='item.imgUrl' />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/09/15eb4e4c3f0d581283fffcfff300e2af.jpg_200x200_62c5db37.jpg',
-        title: '子胥湖欢乐嘉年华',
-        desc: '景色优美，旅游胜地'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/6b/6b37d02f8028b093a3.img.jpg_200x200_a131d7fc.jpg',
-        title: '子胥湖欢乐嘉年华',
-        desc: '景色优美，旅游胜地'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/6b/6b37d02f8028b093a3.img.jpg_200x200_a131d7fc.jpg',
-        title: '子胥湖欢乐嘉年华',
-        desc: '景色优美，旅游胜地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
