@@ -96,11 +96,12 @@ export default {
 @import '~styles/varibles.styl';
 @import '~styles/mixins.styl';
 
-.icons >>> .swiper-container {
+.icons >>> .swiper-container
   height: 0;
   padding-bottom: 50%;
-
-  .icon {
+.icons
+  margin-top: .1rem
+  .icon
     position: relative;
     overflow: hidden;
     float: left;
@@ -108,7 +109,7 @@ export default {
     height: 0;
     padding-bottom: 25%;
 
-    .icon-img {
+    .icon-img
       position: absolute;
       top: 0;
       left: 0;
@@ -117,14 +118,11 @@ export default {
       box-sizing: border-box;
       padding: 0.1rem;
 
-      .icon-img-content {
+      .icon-img-content
         display: block;
         margin: 0 auto;
         height: 100%;
-      }
-    }
-
-    .icon-desc {
+    .icon-desc
       position: absolute;
       bottom: 0;
       left: 0;
@@ -134,7 +132,4 @@ export default {
       text-align: center;
       color: $darkTextColor;
       ellipsis();
-    }
-  }
-}
 </style>
